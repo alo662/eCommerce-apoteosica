@@ -1,0 +1,8 @@
+{
+  "routes": [
+    "/netmall",
+    "/netmall/check-out",
+    "/netmall/search-page",
+    "/netmall/shopping-cart"
+  ]
+}

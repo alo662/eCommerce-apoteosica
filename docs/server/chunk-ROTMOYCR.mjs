@@ -1,0 +1,2 @@
+import './polyfills.server.mjs';
+import{Oa as o,h as r,l as e}from"./chunk-GI2NWK4D.mjs";var l=(()=>{class t{constructor(){this.apiUrl="https://fakestoreapi.com/products",this.httpClient=e(o)}getProducts(i=10){return this.httpClient.get(`${this.apiUrl}?limit=${i}`)}static{this.\u0275fac=function(c){return new(c||t)}}static{this.\u0275prov=r({token:t,factory:t.\u0275fac,providedIn:"root"})}}return t})();export{l as a};
