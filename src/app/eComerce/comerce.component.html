@@ -1,0 +1,59 @@
+<div class="navbar bg-white p-6">
+  <!-- SideBar -->
+
+     <app-sidebar></app-sidebar>
+
+
+  <!-- Imagen de avatar -->
+  <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar" [routerLink]="['/netmall']">
+    <div class="w-10 rounded-full">
+      <img
+        alt="Tailwind CSS Navbar component"
+        src="https://i.pinimg.com/736x/08/6f/b9/086fb9bce60c163f76669b7004ed8126.jpg" />
+    </div>
+  </div>
+
+  <!-- Contenedor central -->
+  <div class="flex flex-1 items-center justify-center space-x-4">
+
+    <!-- Input -->
+    <div class="form-control">
+      <input type="text" placeholder="Search Product" class="input input-bordered border-black w-96"
+      [(ngModel)]="searchTerm"
+    (keyup.enter)="onSearch()"
+       />
+    </div>
+  </div>
+
+  <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+    <div class="w-10 rounded-full">
+      <img
+        alt="Tailwind CSS Navbar component"
+        src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+    </div>
+  </div>
+
+    <!-- Ícono del carrito de compras -->
+    <div tabindex="0" role="button" class="btn btn-ghost btn-circle mr-">
+      <svg
+        [routerLink]="['/netmall/shopping-cart']"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        class="inline-block h-6 w-6 stroke-current">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.5 7.5a1 1 0 001 1.5h11a1 1 0 001-1.5L17 13M7 13l1.2-5.5M9.4 5h5.2l1.2 5.5"></path>
+      </svg>
+      <span *ngIf="totalItemsInCart > 0"
+        class="absolute top-7 right-7 h-4 w-4 text-xs text-white bg-red-600 rounded-full flex items-center justify-center">
+        {{ totalItemsInCart }}
+      </span>
+    </div>
+
+</div>
+
+
+<router-outlet></router-outlet>

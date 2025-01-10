@@ -1,0 +1,59 @@
+<nav>
+  <!-- Botón para abrir/cerrar el menú -->
+  <div class="flex-none mr-5">
+    <button (click)="toggleMenu()" class="btn btn-square btn-ghost">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        class="inline-block h-5 w-5 stroke-current">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Menú desplegable -->
+  <div
+    class="fixed top-0 left-0 h-full bg-gray-800 text-white w-64 shadow-lg transform transition-transform duration-300 z-50"
+    [class.-translate-x-full]="!isOpen"
+  >
+  <!-- Header del sidebar -->
+  <div class="flex items-end justify-end px-4 py-4 bg-gray-900">
+    <button (click)="toggleMenu()" class="btn btn-square btn-sm btn-ghost text-white">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        class="inline-block h-5 w-5 stroke-current">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Opciones del menú -->
+   <div>
+     <ul class="menu menu-vertical p-4">
+       <li>
+         <a routerLink="/inicio" routerLinkActive="active" class="text-white hover:bg-gray-700 rounded-md px-2 py-1">
+           Inicio
+         </a>
+       </li>
+       <br class="p-4">
+       <li>
+         <a routerLink="/acerca" routerLinkActive="active" class="text-white hover:bg-gray-700 rounded-md px-2 py-1">
+           Acerca de nosotros
+         </a>
+       </li>
+     </ul>
+
+   </div>
+</div>
+</nav>
